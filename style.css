@@ -440,3 +440,151 @@ h2 em { color: var(--blue-gray); font-style: normal; }
         right: 10px;
     }
 }
+
+/* Dark & Sharp Stats Text Only */
+.stats-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    align-items: center;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 35px 0;
+}
+
+.stats-strip .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stats-strip .stat strong {
+    color: #102a43;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -1.5px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.stats-strip .stat strong span {
+    color: #168da5;
+    font-weight: 800;
+}
+
+.stats-strip .stat > span {
+    color: #243b53;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.stats-strip .stat-note {
+    gap: 5px;
+}
+
+.stats-strip .stat-note span {
+    color: #102a43;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+        padding: 25px 0;
+    }
+
+    .stats-strip .stat strong {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .stats-strip .stat strong {
+        font-size: 2rem;
+    }
+
+    .stats-strip .stat > span {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* EXPERIENCE SECTION — DARK & SHARP TEXT */
+
+.experience-section .section-kicker,
+.experience-section .eyebrow {
+    color: #183b4e;
+    font-weight: 700;
+}
+
+.experience-section .section-intro h2 {
+    color: #102a43;
+    font-weight: 800;
+    -webkit-text-stroke: 0.4px;
+}
+
+.experience-section .section-intro h2 em {
+    color: #244f60;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.experience-section .intro-note {
+    color: #263f50;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.experience-section .timeline-date {
+    color: #244658;
+    font-weight: 700;
+}
+
+.experience-section .timeline-type {
+    color: #244f60;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.experience-section .timeline-content h3 {
+    color: #102a43;
+    font-weight: 800;
+    -webkit-text-stroke: 0.25px;
+}
+
+.experience-section .timeline-content h4 {
+    color: #183b4e;
+    font-weight: 700;
+}
+
+.experience-section .timeline-content > p:not(.timeline-type) {
+    color: #294456;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.experience-section .timeline-tags span {
+    color: #183b4e;
+    font-weight: 600;
+}
+
+/* Keep timeline markers clearly visible */
+.experience-section .timeline-marker {
+    border-color: #527987;
+}
+
+/* Improve readability without changing the layout */
+.experience-section h2,
+.experience-section h3,
+.experience-section h4,
+.experience-section p,
+.experience-section span {
+    text-rendering: optimizeLegibility;
+}
